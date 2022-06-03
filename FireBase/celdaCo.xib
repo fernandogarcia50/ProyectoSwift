@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="370" id="KGk-i7-Jjw" customClass="celdaCo" customModule="FireBase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="587" height="370"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="587" height="370"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kkR-vm-aUy">
+                        <rect key="frame" x="20" y="11" width="547" height="348"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel" translatesAutoresizingMaskIntoConstraints="NO" id="AYE-7y-ySU">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5OS-nV-fF3"/>
+                                    <constraint firstAttribute="height" constant="150" id="ggp-fO-jIX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-vC-0aD">
+                                <rect key="frame" x="150" y="0.0" width="397" height="60.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpL-y9-7Dg">
+                                        <rect key="frame" x="169" y="0.0" width="59" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripcion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJd-Ll-jJl">
+                                        <rect key="frame" x="156.5" y="41.5" width="84.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="kkR-vm-aUy" secondAttribute="bottom" id="eGW-zL-p4Q"/>
+                    <constraint firstItem="kkR-vm-aUy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="sAB-uB-Myg"/>
+                    <constraint firstItem="kkR-vm-aUy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="tNI-bt-K72"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kkR-vm-aUy" secondAttribute="trailing" id="uLF-aA-o4k"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descripcionCO" destination="VJd-Ll-jJl" id="QET-5m-dBq"/>
+                <outlet property="imagenCO" destination="AYE-7y-ySU" id="xcw-HX-KZx"/>
+                <outlet property="tituloCo" destination="rpL-y9-7Dg" id="jvc-0n-TAq"/>
+            </connections>
+            <point key="canvasLocation" x="47.10144927536232" y="174.10714285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="marvel" width="1200" height="738"/>
+    </resources>
+</document>

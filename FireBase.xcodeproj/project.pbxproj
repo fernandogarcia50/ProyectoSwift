@@ -23,6 +23,10 @@
 		385FA6CF2841200500D2AF5C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385FA6CE2841200500D2AF5C /* SearchViewController.swift */; };
 		38623D312847B88F00BC572D /* CeldaPersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38623D2F2847B88E00BC572D /* CeldaPersonaje.swift */; };
 		38623D322847B88F00BC572D /* CeldaPersonaje.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38623D302847B88F00BC572D /* CeldaPersonaje.xib */; };
+		38657BBD284A569B0073A77D /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38657BBC284A569B0073A77D /* MapaViewController.swift */; };
+		3879132228490B18006F8415 /* MostrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3879132128490B18006F8415 /* MostrarViewController.swift */; };
+		3879132628490FF3006F8415 /* celdaCo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3879132428490FF3006F8415 /* celdaCo.swift */; };
+		3879132728490FF3006F8415 /* celdaCo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3879132528490FF3006F8415 /* celdaCo.xib */; };
 		959E35F89F2D31E717E79413 /* Pods_FireBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22B3393337E3CA0EDF7350D /* Pods_FireBase.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 		385FA6CE2841200500D2AF5C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		38623D2F2847B88E00BC572D /* CeldaPersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPersonaje.swift; sourceTree = "<group>"; };
 		38623D302847B88F00BC572D /* CeldaPersonaje.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CeldaPersonaje.xib; sourceTree = "<group>"; };
+		38657BBC284A569B0073A77D /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		3879132128490B18006F8415 /* MostrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostrarViewController.swift; sourceTree = "<group>"; };
+		3879132428490FF3006F8415 /* celdaCo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaCo.swift; sourceTree = "<group>"; };
+		3879132528490FF3006F8415 /* celdaCo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = celdaCo.xib; sourceTree = "<group>"; };
 		430B9FDACC63C4C034A04021 /* Pods-FireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBase.debug.xcconfig"; path = "Target Support Files/Pods-FireBase/Pods-FireBase.debug.xcconfig"; sourceTree = "<group>"; };
 		B22B3393337E3CA0EDF7350D /* Pods_FireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB654A3EE18E3806983675C9 /* Pods-FireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBase.release.xcconfig"; path = "Target Support Files/Pods-FireBase/Pods-FireBase.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +108,10 @@
 				3827741B28450CBA005A2D33 /* personajeManager.swift */,
 				38623D2F2847B88E00BC572D /* CeldaPersonaje.swift */,
 				38623D302847B88F00BC572D /* CeldaPersonaje.xib */,
+				3879132128490B18006F8415 /* MostrarViewController.swift */,
+				3879132428490FF3006F8415 /* celdaCo.swift */,
+				3879132528490FF3006F8415 /* celdaCo.xib */,
+				38657BBC284A569B0073A77D /* MapaViewController.swift */,
 			);
 			path = FireBase;
 			sourceTree = "<group>";
@@ -183,6 +195,7 @@
 				385A0F99283BCDAB009B4D4C /* LaunchScreen.storyboard in Resources */,
 				38623D322847B88F00BC572D /* CeldaPersonaje.xib in Resources */,
 				3803B7B5283E723700A2CFF9 /* GoogleService-Info.plist in Resources */,
+				3879132728490FF3006F8415 /* celdaCo.xib in Resources */,
 				385A0F96283BCDAB009B4D4C /* Assets.xcassets in Resources */,
 				385A0F91283BCDAA009B4D4C /* Main.storyboard in Resources */,
 			);
@@ -246,6 +259,9 @@
 				385A0F8C283BCDAA009B4D4C /* SceneDelegate.swift in Sources */,
 				3827741928450C5A005A2D33 /* personajeDatos.swift in Sources */,
 				3827741C28450CBA005A2D33 /* personajeManager.swift in Sources */,
+				3879132628490FF3006F8415 /* celdaCo.swift in Sources */,
+				3879132228490B18006F8415 /* MostrarViewController.swift in Sources */,
+				38657BBD284A569B0073A77D /* MapaViewController.swift in Sources */,
 				385882FA283D2101001D812D /* HomeViewController.swift in Sources */,
 				3827741628450958005A2D33 /* personajeModelo.swift in Sources */,
 			);

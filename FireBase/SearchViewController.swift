@@ -16,6 +16,15 @@ class SearchViewController: UIViewController,UISearchBarDelegate, personajeModel
         let alerta = UIAlertController(title: "Guardar", message: "¿Deseas guardar este elemento?", preferredStyle: .alert)
         let accion = UIAlertAction(title: "Aceptar", style: .default) { (_) in
             print("acepte")
+            print("correo guardar : \(self.correo)")
+            //hacemos un nuevo tipo
+            let nuevoPersonaje = PersonajeUsuario(context: self.contexto)
+            nuevoPersonaje.email = self.correo
+            nuevoPersonaje.nombre = self.listaPersonajes[indexPath.row].name
+            nuevoPersonaje.descripcion = self.listaPersonajes[indexPath.row].description
+            let urlImagenGuardar = self.listaPersonajes[indexPath.row].thumbnail?.path
+            nuevoPersonaje.imagen = "\(urlImagenGuardar ?? "").jpg"
+            self.guardar()
         }
         let denegar = UIAlertAction(title: "Denegar", style: .cancel)
         alerta.addAction(accion)
@@ -24,6 +33,20 @@ class SearchViewController: UIViewController,UISearchBarDelegate, personajeModel
         tablaPersonajes.deselectRow(at: indexPath, animated: true)
         print(indexPath)
     }
+    func guardar() {
+        
+        do{
+            try contexto.save()
+            print("guardado")
+        }catch{
+            print("Error al guardar en core data: \(error.localizedDescription)")
+        }
+        
+    }
+    
+    
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tablaPersonajes.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! CeldaPersonaje
@@ -66,7 +89,8 @@ class SearchViewController: UIViewController,UISearchBarDelegate, personajeModel
     func huboError(error: Error) {
        
     }
-    
+    //contexto para core data
+    let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var tablaPersonajes: UITableView!
     var atributos = ["Personajes", "Personaje por serie"]
     var urlStringCoincidencia = "https://gateway.marvel.com/v1/public/characters?ts=1000&apikey=e26cfe1a7428a3244311a66e0d8e2c65&hash=a7659b297b7557d61c40537cec90fb3a&nameStartsWith="
@@ -75,10 +99,24 @@ class SearchViewController: UIViewController,UISearchBarDelegate, personajeModel
     var personajemanager = personajeManager()
     var listaPersonajes:[Results]=[]
     var numero:Int = 0
+    var correo = ""
     @IBOutlet weak var busqueda: UISearchBar!
     @IBOutlet weak var picker: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //validar la sesion
+        let defaults = UserDefaults.standard
+        
+        //validamos si existe la sesion guardada
+        
+        if let email = defaults.value(forKey: "email") as? String{
+            print(email)
+            correo = email
+        }
+        
+        
+        
+        
         tablaPersonajes.delegate=self
         tablaPersonajes.dataSource=self
         tablaPersonajes.register(UINib(nibName: "CeldaPersonaje", bundle: nil), forCellReuseIdentifier: "celda")
